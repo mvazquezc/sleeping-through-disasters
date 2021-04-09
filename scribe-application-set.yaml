@@ -20,8 +20,8 @@ spec:
         targetRevision: base-config
         path: config/scribe
       syncPolicy:
-        automated: true
-        selfHeal: true
+        automated: "true"
+        selfHeal: "true"
       destination:
         server: '{{url}}'
         namespace: scribe-system
