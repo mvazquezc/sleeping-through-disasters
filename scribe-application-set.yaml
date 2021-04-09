@@ -19,6 +19,9 @@ spec:
         repoURL: https://github.com/mvazquezc/sleeping-through-disasters.git
         targetRevision: base-config
         path: config/scribe
+      syncPolicy:
+        automated: true
+        selfHeal: true
       destination:
         server: '{{url}}'
         namespace: scribe-system
