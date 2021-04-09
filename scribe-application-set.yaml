@@ -20,8 +20,18 @@ spec:
         targetRevision: base-config
         path: config/scribe
       syncPolicy:
-        automated: "true"
-        selfHeal: "true"
+        automated:
+          selfHeal: true
+          prune: false
+        syncOptions:
+        - Validate=true
+        - CreateNamespace=false
+        retry:
+          limit: 5
+          backoff:
+            duration: 5s
+            factor: 2
+            maxDuration: 3m
       destination:
         server: '{{url}}'
         namespace: scribe-system
