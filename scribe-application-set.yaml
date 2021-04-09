@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: scribe
+spec:
+  generators:
+  - list:
+      items:
+      - cluster: cluster-eu
+        url: https://api.eu-cluster.c78f.sandbox1269.opentlc.com:6443
+      - cluster: cluster-us
+        url: https://api.us-cluster.c78f.sandbox1269.opentlc.com:6443
+  template:
+    metadata:
+      name: '{{cluster}}-scribe'
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/mvazquezc/sleeping-through-disasters.git
+        targetRevision: base-config
+        path: config/scribe
+      destination:
+        server: '{{url}}'
+        namespace: scribe-system
