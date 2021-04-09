@@ -5,7 +5,7 @@ metadata:
 spec:
   generators:
   - list:
-      items:
+      elements:
       - cluster: cluster-eu
         url: https://api.eu-cluster.c78f.sandbox1269.opentlc.com:6443
       - cluster: cluster-us
