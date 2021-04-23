@@ -1,8 +1,7 @@
-#apiVersion: multicluster.x-k8s.io/v1alpha1
-#kind: ServiceExport
-#metadata:
-#  generation: 1
-#  name: scribe-rsync-dest-uploader-pvc
-#  namespace: uploader-app
-#  annotations:
-#    argocd.argoproj.io/sync-wave: "2"
+apiVersion: multicluster.x-k8s.io/v1alpha1
+kind: ServiceExport
+metadata:
+  name: scribe-rsync-dest-uploader-pvc
+  namespace: uploader-app
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
