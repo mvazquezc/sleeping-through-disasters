@@ -12,13 +12,13 @@ spec:
         url: https://api.us-cluster.03ac.sandbox1106.opentlc.com:6443
   template:
     metadata:
-      name: '{{cluster}}-scribe'
+      name: '{{cluster}}-uploader'
     spec:
       project: default
       source:
         repoURL: https://github.com/mvazquezc/sleeping-through-disasters.git
         targetRevision: base-config
-        path: config/scribe
+        path: config/web-app
       syncPolicy:
         automated:
           selfHeal: true
@@ -34,4 +34,4 @@ spec:
             maxDuration: 3m
       destination:
         server: '{{url}}'
-        namespace: scribe-system
+        namespace: uploader-app
