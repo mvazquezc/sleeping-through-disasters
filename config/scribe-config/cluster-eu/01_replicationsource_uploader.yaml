@@ -11,5 +11,6 @@ spec:
     schedule: "*/2 * * * *"
   rsync:
     sshKeys: scribe-key
-    address: scribe-rsync-dest-uploader-pvc.uploader-app.svc.clusterset.local
+#    address: scribe-rsync-dest-uploader-pvc.uploader-app.svc.clusterset.local
+    address: 169.254.48.251
     copyMethod: None
