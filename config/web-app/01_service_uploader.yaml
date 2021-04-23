@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: uploader
   namespace: uploader-app
-  label:
+  labels:
     app: uploader
 spec:
   ports:
