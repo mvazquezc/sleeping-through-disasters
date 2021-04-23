@@ -3,11 +3,13 @@ kind: ReplicationSource
 metadata:
   name: uploader-pvc 
   namespace: uploader-app
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
 spec:
   sourcePVC: uploader-pvc
   trigger:
     schedule: "*/2 * * * *"
   rsync:
     sshKeys: scribe-key
-    address: a42e86e2cda3f423691ac101a7d19c38-475e81bca861123f.elb.us-east-2.amazonaws.com 
+    address: scribe-rsync-dest-uploader-pvc.uploader-app.svc.clusterset.local:22
     copyMethod: None

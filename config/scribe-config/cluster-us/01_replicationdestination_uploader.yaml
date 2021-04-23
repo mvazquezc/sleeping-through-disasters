@@ -3,6 +3,8 @@ kind: ReplicationDestination
 metadata:
   name: uploader-pvc 
   namespace: uploader-app
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
 spec:
   rsync:
     serviceType: ClusterIP
