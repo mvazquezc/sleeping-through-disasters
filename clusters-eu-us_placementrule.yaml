@@ -11,5 +11,5 @@ spec:
     - key: name
       operator: In
       values:
-      - "cluster-eu"
-      - "cluster-us"
+      - "eu-cluster"
+      - "us-cluster"
