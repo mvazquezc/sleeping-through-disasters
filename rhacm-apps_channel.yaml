@@ -1,0 +1,8 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: Channel
+metadata:
+  name: sleeping-through-disasters
+  namespace: local-cluster
+spec:
+  type: Git
+  pathname: https://github.com/mvazquezc/sleeping-through-disasters.git
