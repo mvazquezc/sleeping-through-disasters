@@ -8,7 +8,7 @@ metadata:
     apps.open-cluster-management.io/git-path: config/scribe-config/cluster-eu
     apps.open-cluster-management.io/git-branch: base-config
 spec:
-  channel: local-cluster/sleeping-through-disasters
+  channel: rhacm-apps/sleeping-through-disasters
   placement:
     placementRef:
       kind: PlacementRule
