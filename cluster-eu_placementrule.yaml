@@ -1,0 +1,13 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  name: cluster-eu
+spec:
+  clusterConditions:
+    - type: "ManagedClusterConditionAvailable"
+      status: "True"
+  clusterSelector:
+    matchExpressions: []
+    matchLabels: 
+      name: "cluster-eu"
+  clusterReplicas: 1

@@ -1,0 +1,15 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: Subscription
+metadata:
+  name: scribe-configs-cluster-us-subscription
+  labels:
+    app: scribe-configs-cluster-us
+  annotations:
+    apps.open-cluster-management.io/git-path: config/scribe-config/cluster-us
+    apps.open-cluster-management.io/git-branch: base-config
+spec:
+  channel: rhacm-apps/sleeping-through-disasters
+  placement:
+    placementRef:
+      kind: PlacementRule
+      name: cluster-us
