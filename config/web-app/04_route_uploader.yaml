@@ -4,6 +4,7 @@ metadata:
   name: uploader
   namespace: uploader-app
 spec:
+  host: uploader.octo.eng.rdu2.redhat.com
   port:
     targetPort: 8080
   to:
