@@ -2,7 +2,7 @@ apiVersion: apps.open-cluster-management.io/v1
 kind: Subscription
 metadata:
   name: uploader-clusters-eu-us-subscription
-  namespace: uploader-app
+  namespace: rhacm-apps
   labels:
     app: uploader-clusters-eu-us
   annotations:

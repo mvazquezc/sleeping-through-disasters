@@ -1,16 +1,14 @@
 apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 metadata:
-  name: clusters-eu-us
-  namespace: scribe-system
+  name: cluster-eu
+  namespace: rhacm-apps
 spec:
   clusterConditions:
     - type: "ManagedClusterConditionAvailable"
       status: "True"
   clusterSelector:
-    matchExpressions:
-    - key: name
-      operator: In
-      values:
-      - "eu-cluster"
-      - "us-cluster"
+    matchExpressions: []
+    matchLabels: 
+      name: "eu-cluster"
+  clusterReplicas: 1
