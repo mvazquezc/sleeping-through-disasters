@@ -23,6 +23,20 @@ spec:
       containers:
       - image: quay.io/rcook/tools:php-demo
         name: tools
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 8080
+          initialDelaySeconds: 2
+          timeoutSeconds: 2
+          periodSeconds: 5
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 8080
+          initialDelaySeconds: 2
+          timeoutSeconds: 2
+          periodSeconds: 5         
         ports:
         - containerPort: 8080
         volumeMounts:
